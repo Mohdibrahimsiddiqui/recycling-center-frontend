@@ -1,7 +1,8 @@
  // ===================== MAP INITIALIZATION =====================
 
 // Base API URL - change this for deployment
-const API_BASE_URL = "http://localhost:5000/api";
+ const API_BASE_URL = "https://recycling-backend.onrender.com/api";
+
 
 // Initialize the map
 let map = L.map('map').setView([17.385, 78.4867], 12); // Hyderabad
