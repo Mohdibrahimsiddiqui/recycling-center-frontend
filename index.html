@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recycling Center Locator</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="logo">
+        <h2>♻ Recycling Center Locator</h2>
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="dropdown">
+            <a href="#">More ▼</a>
+            <ul class="dropdown-menu">
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </li>
+    </ul>
+    <div class="nav-extras">
+        <input type="text" placeholder="Search..." class="search-bar">
+        <button id="dark-mode-toggle">🌙</button>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero" style="background-image: url('images/hero.jpg');">
+    <div class="hero-content">
+        <h1>Find the Nearest Recycling Center 🌍</h1>
+        <p>Help the planet by recycling your waste responsibly.</p>
+        <a href="#search-section" class="btn">Find a Center</a>
+    </div>
+</header>
+
+<!-- Search & Filter Section -->
+<section id="search-section" class="container">
+    <h2>Search Recycling Centers</h2>
+
+
+    <div class="search-container">
+        <input type="text" id="locationInput" placeholder="Enter location" />
+        <button onclick="searchLocation()">Search</button>
+      </div>
+      
+      <!-- This will display recycling centers found -->
+      <div id="recyclingCenterList"></div>
+
+    <label for="material-filter">Filter by Material:</label>
+    <select id="material-filter">
+        <option value="all">All</option>
+        <option value="plastic">Plastic</option>
+        <option value="glass">Glass</option>
+        <option value="metal">Metal</option>
+        <option value="metal">Electronics</option>
+        <option value="metal"></option>
+    </select>
+
+    <!-- Map Container -->
+    <div id="map" style="height: 500px; width: 100%; margin-top: 20px;"></div>
+
+    <!-- Recycling Centers List -->
+    <h3>Recycling Centers</h3>
+    <ul id="centers"></ul>
+</section>
+
+<!-- Contact Form Section -->
+<div id="contactform-container">
+    <h2>Contact Us</h2>
+    <p>We'd love to hear from you! Please fill out the form below and we'll get back to you as soon as possible.</p>
+    <form id="contactform">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <input type="text" id="subject" placeholder="Subject" required />
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+        <p class="success-message">Your message has been sent successfully!</p>
+        <p class="error-message">Oops! Something went wrong. Please try again.</p>
+    </form>
+</div>
+
+<!-- Back to Top Button -->
+<button id="back-to-top" onclick="scrollToTop()">⬆</button>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 Recycling Center Locator. All rights reserved.</p>
+</footer>
+
+<!-- JavaScript -->
+<script src="script.js">
+  </script>
+  <link rel="icon" href="path/to/favicon.ico" type="image/x-icon" />
+</body>
+</html>
